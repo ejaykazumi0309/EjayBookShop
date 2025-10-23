@@ -1,0 +1,214 @@
+
+const books = [
+    {
+        id: 1,
+        title: "Stress Relief Coloring Book for Adults and Kids",
+        image: "assets/img/StressRelief.png", //
+        type: "book",
+        shortDesc: "Adorable animal designs for kids to color and enjoy.",
+        fullDesc: "Dive into a world of cute and playful animals with intricate patterns perfect for young colorists. This book includes 50 pages of fun, easy-to-color illustrations that spark imagination and creativity.",
+        price: "$9.99 on Amazon",
+        price2: "$1.99 on Payhip, Gumroad",
+        amazonLink: "https://amazon.com/dp/EXAMPLE1",
+        gumroadLink: "https://gumroad.com/l/EXAMPLE1",
+        payhipLink: "https://payhip.com/b/EXAMPLE1"
+    },
+    {
+        id: 2,
+        title: "Spooky Cute Halloween Coloring Book for Kids",
+        image: "assets/img/Holloween.png",
+        type: ["book", "pdf"],
+        shortDesc: "Relaxing patterns for adults to unwind and meditate.",
+        fullDesc: "Find peace with calming garden-inspired designs. Featuring mandalas and nature scenes, this book is ideal for stress relief and mindfulness coloring sessions.",
+        price: "$14.99",
+        amazonLink: "https://amazon.com/dp/EXAMPLE2",
+        gumroadLink: "https://gumroad.com/l/EXAMPLE2",
+        payhipLink: "https://payhip.com/b/EXAMPLE2"
+    },
+    {
+        id: 3,
+        title: "Christmas Wonderland Coloring Book:",
+        image: "assets/img/christmas.png",
+        type: ["book", "pdf"],
+        shortDesc: "None",
+        fullDesc: "Bring fairytales to life with detailed illustrations of castles, dragons, and heroes. Perfect for family coloring or solo adventures in fantasy worlds.",
+        price: "$13.99",
+        amazonLink: "https://amazon.com/dp/EXAMPLE3",
+        gumroadLink: "https://gumroad.com/l/EXAMPLE3",
+        payhipLink: "https://payhip.com/b/EXAMPLE3"
+    },
+   
+    
+];
+
+
+function loadGallery() {
+    const gallery = document.getElementById('book-gallery');
+    gallery.innerHTML = '';
+
+   
+    const shuffledBooks = [...books].sort(() => Math.random() - 0.5);
+
+    shuffledBooks.forEach(book => {
+        const card = document.createElement('div');
+        card.className = 'book-card';
+        card.innerHTML = `
+            <img src="${book.image}" alt="${book.title}">
+            <h3>${book.title}</h3>
+            <p>${book.shortDesc}</p>
+            <button onclick="openDetails(${book.id})">View Details</button>
+        `;
+        gallery.appendChild(card);
+    });
+}
+
+
+function openDetails(id) {
+    const book = books.find(b => b.id === id);
+    const details = document.getElementById('book-details');
+    details.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <h2>${book.title}</h2>
+        <p>${book.fullDesc}</p>
+        <p><strong>Price: ${book.price}</strong></p>
+             <p><strong>Price: ${book.price2}</strong></p>
+        <button onclick="openBuy(${book.id})">Buy Now</button>
+    `;
+    document.getElementById('details-modal').style.display = 'flex';
+}
+
+
+function openBuy(id) {
+    const book = books.find(b => b.id === id);
+    const options = document.getElementById('buy-options');
+
+    options.innerHTML = `
+        <span class="close" onclick="closeModal('buy-modal')">&times;</span>
+        <h2>Choose Your Store</h2>
+
+        <div class="buy-section">
+            <h3>📘 Physical Coloring Book</h3>
+            <a href="${book.amazonLink}" target="_blank" class="buy-btn">Buy on Amazon</a>
+        </div>
+
+        <div class="buy-section">
+            <h3>💾 Printable PDF</h3>
+            <a href="${book.gumroadLink}" target="_blank" class="buy-btn">Buy on Gumroad</a>
+            <a href="${book.payhipLink}" target="_blank" class="buy-btn">Buy on Payhip</a>
+        </div>
+    `;
+
+    document.getElementById('buy-modal').style.display = 'flex';
+}
+
+
+
+
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+
+window.onclick = function(event) {
+    const detailsModal = document.getElementById('details-modal');
+    const buyModal = document.getElementById('buy-modal');
+    if (event.target === detailsModal) closeModal('details-modal');
+    if (event.target === buyModal) closeModal('buy-modal');
+};
+
+
+document.addEventListener('DOMContentLoaded', loadGallery);
+
+
+let heroIndex = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+const dotsContainer = document.getElementById('hero-dots');
+
+
+slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.addEventListener('click', () => goToHeroSlide(i));
+    dotsContainer.appendChild(dot);
+});
+const dots = dotsContainer.querySelectorAll('span');
+
+function showHeroSlide(n) {
+    if(n >= slides.length) heroIndex = 0;
+    if(n < 0) heroIndex = slides.length - 1;
+
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+
+    slides[heroIndex].classList.add('active');
+    dots[heroIndex].classList.add('active');
+}
+
+
+function changeHeroSlide(n) {
+    heroIndex += n;
+    showHeroSlide(heroIndex);
+}
+
+
+function goToHeroSlide(n) {
+    heroIndex = n;
+    showHeroSlide(heroIndex);
+}
+
+
+setInterval(() => {
+    heroIndex++;
+    showHeroSlide(heroIndex);
+}, 5000);
+
+
+showHeroSlide(heroIndex);
+
+
+function handleBottomNav() {
+    const navItems = document.querySelectorAll('.bottom-nav .nav-item');
+    const pages = document.querySelectorAll('.page');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+
+ 
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+
+            const type = item.dataset.type;
+
+    
+            let targetPage;
+            if (type === 'all') targetPage = document.getElementById('home-page');
+            else if (type === 'book') targetPage = document.getElementById('books-page');
+            else if (type === 'pdf') targetPage = document.getElementById('pdf-page');
+
+        
+            pages.forEach(page => {
+                if (page === targetPage) {
+                    page.classList.add('active', 'slide-in-right');
+                    page.classList.remove('slide-out-left');
+                } else if (page.classList.contains('active')) {
+                    page.classList.add('slide-out-left');
+                    setTimeout(() => page.classList.remove('active', 'slide-out-left', 'slide-in-right'), 500);
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+
+  
+            if (type === 'all') {
+                loadGallery(books, 'book-gallery');
+            } else {
+                const filtered = books.filter(book => book.type.includes(type));
+                const galleryId = type === 'book' ? 'books-gallery' : 'pdf-gallery';
+                loadGallery(filtered, galleryId);
+            }
+        });
+    });
+}
+
+

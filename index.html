@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Coloring Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+            <div>
+                <h1>Ejay Coloring Books!</h1>
+            <p>Welcome to Cozy World.</p>
+            </div>
+            
+        
+    </header>
+
+    <div class="hero-slider" id="hero-slider">
+        <div class="slide active">
+            <img src="assets/img/Slider1.png" alt="Slide 1">
+            <div class="caption">
+                <h2>Stress Relief Coloring Book</h2>
+                <p>Relax, unwind, and get creative!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/img/Slider2.png" alt="Slide 2">
+            <div class="caption">
+                <h2>Little Corner</h2>
+                <p>Fun coloring for kids and adults alike.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="assets/img/Slider3.png" alt="Slide 3">
+            <div class="caption">
+                <h2>Cozy Friends</h2>
+                <p>De-stress with beautiful designs.</p>
+            </div>
+        </div>
+
+        <button class="prev" onclick="changeHeroSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeHeroSlide(1)">&#10095;</button>
+    </div>
+    
+
+    <div class="hero-dots" id="hero-dots"></div>
+
+    <main class="container">
+        
+        <section id="book-gallery">
+
+        </section>
+    </main>
+
+ 
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('details-modal')">&times;</span>
+            <div id="book-details">
+          
+            </div>
+        </div>
+    </div>
+
+
+    <div id="buy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('buy-modal')">&times;</span>
+
+            <div id="buy-options">
+               
+            </div>
+        </div>
+    </div>
+
+<nav class="bottom-nav">
+    <a href="" class="nav-item active">
+        <span>Home</span>
+    </a>
+  
+    <a href="About/" class="nav-item">
+ 
+        <span>About</span>
+    </a>
+</nav>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

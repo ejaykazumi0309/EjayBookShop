@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #F8E9E2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    
+}
+.bottom-nav a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-item {
+    color: #A67B5B;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav-item .material-icons {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.nav-item:hover {
+    color: #C3A384;
+    transform: scale(1.05);
+}
+
+.nav-item.active {
+    color: #8B5E3C;
+}
+
+
+body {
+    padding-bottom: 60px;
+}
+
+
+@media (min-width: 768px) {
+    .bottom-nav {
+        justify-content: center;
+        gap: 4rem;
+    }
+}
+
+
+        header {
+            background-color: #ffbd8fa4;
+            color: white;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #ffbd8fa4; 
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            border-left: 5px solid #ffbd8fa4;
+            padding-left: 10px;
+            color: #333;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px;
+            background: #f2f2ff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e0e0ff;
+        }
+
+        .faq-answer {
+            padding: 15px;
+            display: none;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+
+        footer {
+            text-align: center;
+            background: #ffbd8fa4;
+           
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Ejay Coloring Book Shop</h1>
+    </header>
+
+    <main>
+    
+        <section>
+            <h2>Who We Are</h2>
+            <br>
+            <p>
+                <strong>Ejay Coloring Book Shop</strong> is an independent creative studio dedicated to designing 
+                high-quality coloring books for all ages — kids, teens, and adults. 
+                Our goal is to help people relax, express creativity, and enjoy mindful moments through art.
+            </p>
+        </section>
+
+        <section>
+            <h2>Is My Coloring Book Shop Trustable?</h2>
+            <br>
+            <p>
+                Absolutely Yes. We only offer original coloring book content published under our verified Amazon, Gumroad, 
+                and Payhip accounts. Each purchase goes through secure payment gateways handled by those trusted platforms.
+            </p>
+            <br>
+            <ul>
+                <li>✔ Secure transactions through Amazon, Gumroad, and Payhip</li>
+                <li>✔ Real customer reviews</li>
+                <li>✔ Copyright-protected and high-quality content</li>
+            </ul>
+        </section>
+
+      
+        <section>
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you ship physical books worldwide?</div>
+                <div class="faq-answer">Yes, all physical books available on Amazon can be shipped internationally depending on Amazon’s region availability.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I download and print the PDF books?</div>
+                <div class="faq-answer">Absolutely! Our Gumroad and Payhip versions are printable PDFs that you can print at home or in a local print shop.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Why so Expensive?</div>
+                <div class="faq-answer">Our design is not just any other coloring book we are unique, you can also buy the Ready to Print Coloring buy for as low as $1 / ₱50</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you accept custom coloring book requests?</div>
+                <div class="faq-answer">Yes, we occasionally take custom requests for bulk or personal coloring book projects. You can contact us through our contact form for details.</div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-question">Does your coloring book a physical Book?</div>
+                <div class="faq-answer">Yes, we do sell a Physical Book Ready to color and we also sell Ready to print coloring book much cheaper than the physical one</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I get discount when buying tons of Ready to Print PDF File?</div>
+                <div class="faq-answer">Yes, we do sell bulk for a low price</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ejay Coloring Book Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+       
+        document.querySelectorAll(".faq-question").forEach(q => {
+            q.addEventListener("click", () => {
+                const answer = q.nextElementSibling;
+                const open = answer.style.display === "block";
+                document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+                answer.style.display = open ? "none" : "block";
+            });
+        });
+    </script>
+    <nav class="bottom-nav">
+        <a href="../" class="nav-item active">
+            <span>Home</span>
+        </a>
+        <a href="About/" class="nav-item">
+            <span>About</span></a>
+    </nav>
+</body>
+</html>
