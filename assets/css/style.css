@@ -34,7 +34,6 @@ header {
     height: 20px;
 }
 
-header 
 
 #lalaka{
     padding-top: 20px;
@@ -184,101 +183,125 @@ header p {
 }
 
 /* Modals */
+/* ===== Responsive Modal Fix (Final Override) ===== */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease;
+    padding: 1rem;
+    z-index: 99999; /* Highest layer to stay above nav */
+    overflow-y: auto; /* Enables scroll on mobile if content too tall */
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 30px;
+    background: #fff;
+    padding: 1.5rem;
     border-radius: 15px;
-    width: 90%;
     max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.3s ease;
 }
 
+/* Smooth fade/slide-in animation */
+@keyframes popIn {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive image inside modal */
+.modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Headings and text */
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Buttons inside modal */
+.modal-content button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: #A67B5B;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #C3A384;
+    transform: scale(1.05);
+}
+
+/* Close button styling */
 .close {
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 2em;
+    font-size: 2rem;
     cursor: pointer;
-    color: #d4af37;
+    color: #A67B5B;
+    transition: color 0.3s;
 }
 
-#book-details {
-    text-align: center;
+.close:hover {
+    color: #C3A384;
 }
 
-#book-details img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-#book-details h2 {
-    margin-bottom: 10px;
-}
-
-#book-details p {
-    margin-bottom: 20px;
-}
-
-#buy-options {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-#buy-options a {
-    background-color: #d4af37;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#buy-options a:hover {
-    background-color: #b8860b;
-    transform: scale(1.05);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-    #book-gallery {
-        grid-template-columns: 1fr;
-    }
+/* Mobile Optimization */
+@media (max-width: 600px) {
     .modal-content {
-        padding: 20px;
+        padding: 1rem;
+        border-radius: 10px;
     }
-    #buy-options {
-        flex-direction: column;
-        align-items: center;
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .modal-content button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.9rem;
     }
 }
+
 
 /*--------*/
 /* Hero Slider */
