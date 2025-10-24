@@ -9,9 +9,9 @@ const books = [
         fullDesc: "Dive into a world of cute and playful animals with intricate patterns perfect for young colorists. This book includes 50 pages of fun, easy-to-color illustrations that spark imagination and creativity.",
         price: "$9.99 on Amazon",
         price2: "$1.99 on Payhip, Gumroad",
-        amazonLink: "https://amazon.com/dp/EXAMPLE1",
-        gumroadLink: "https://gumroad.com/l/EXAMPLE1",
-        payhipLink: "https://payhip.com/b/EXAMPLE1"
+        amazonLink: "",
+        gumroadLink: "https://roseteejay.gumroad.com/l/vkslpo",
+        payhipLink: "https://payhip.com/b/tPKgA"
     },
     {
         id: 2,
@@ -21,21 +21,23 @@ const books = [
         shortDesc: "Relaxing patterns for adults to unwind and meditate.",
         fullDesc: "Find peace with calming garden-inspired designs. Featuring mandalas and nature scenes, this book is ideal for stress relief and mindfulness coloring sessions.",
         price: "$14.99",
-        amazonLink: "https://amazon.com/dp/EXAMPLE2",
-        gumroadLink: "https://gumroad.com/l/EXAMPLE2",
-        payhipLink: "https://payhip.com/b/EXAMPLE2"
+        price2: "$1.99 on Payhip, Gumroad",
+        amazonLink: "",
+        gumroadLink: "https://roseteejay.gumroad.com/l/yipke",
+        payhipLink: "https://payhip.com/b/ftgRk"
     },
     {
         id: 3,
-        title: "Christmas Wonderland Coloring Book:",
+        title: "Christmas Wonderland Coloring Book",
         image: "assets/img/christmas.png",
         type: ["book", "pdf"],
         shortDesc: "None",
         fullDesc: "Bring fairytales to life with detailed illustrations of castles, dragons, and heroes. Perfect for family coloring or solo adventures in fantasy worlds.",
-        price: "$13.99",
-        amazonLink: "https://amazon.com/dp/EXAMPLE3",
-        gumroadLink: "https://gumroad.com/l/EXAMPLE3",
-        payhipLink: "https://payhip.com/b/EXAMPLE3"
+        price: "$9.99",
+        price2: "$1.99 on Payhip, Gumroad",
+        amazonLink: "",
+        gumroadLink: "https://roseteejay.gumroad.com/l/mueloe",
+        payhipLink: "https://payhip.com/b/x4CsQ"
     },
    
     
@@ -72,7 +74,7 @@ function openDetails(id) {
         <p>${book.fullDesc}</p>
         <p><strong>Price: ${book.price}</strong></p>
              <p><strong>Price: ${book.price2}</strong></p>
-        <button onclick="openBuy(${book.id})">Buy Now</button>
+        <button class="putanginamo" onclick="openBuy(${book.id})">Buy Now</button>
     `;
     document.getElementById('details-modal').style.display = 'flex';
 }
