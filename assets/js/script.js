@@ -7,10 +7,10 @@ const books = [
         type: "book",
         shortDesc: "Adorable animal designs for kids to color and enjoy.",
         fullDesc: "Dive into a world of cute and playful animals with intricate patterns perfect for young colorists. This book includes 50 pages of fun, easy-to-color illustrations that spark imagination and creativity.",
-        price: "$9.99 on Amazon",
+        price: "$9.99 on Amazon (Soon)",
         price2: "$1.99 on Payhip, Gumroad",
         amazonLink: "",
-        gumroadLink: "https://roseteejay.gumroad.com/l/vkslpo",
+        gumroadLink: "https://roseteejay.gumroad.com/l/epjllw",
         payhipLink: "https://payhip.com/b/tPKgA"
     },
     {
@@ -18,12 +18,12 @@ const books = [
         title: "Spooky Cute Halloween Coloring Book for Kids",
         image: "assets/img/Holloween.png",
         type: ["book", "pdf"],
-        shortDesc: "Relaxing patterns for adults to unwind and meditate.",
-        fullDesc: "Find peace with calming garden-inspired designs. Featuring mandalas and nature scenes, this book is ideal for stress relief and mindfulness coloring sessions.",
-        price: "$14.99",
+        shortDesc: "Cute, fun, and spooky!",
+        fullDesc: "This Halloween coloring book is filled with adorable ghosts, pumpkins, and friendly monsters — perfect for kids who love a mix of spooky and sweet.",
+        price: "$9.99 on Amazon (Soon)",
         price2: "$1.99 on Payhip, Gumroad",
         amazonLink: "",
-        gumroadLink: "https://roseteejay.gumroad.com/l/yipke",
+        gumroadLink: "https://roseteejay.gumroad.com/l/aulqh",
         payhipLink: "https://payhip.com/b/ftgRk"
     },
     {
@@ -31,12 +31,12 @@ const books = [
         title: "Christmas Wonderland Coloring Book",
         image: "assets/img/christmas.png",
         type: ["book", "pdf"],
-        shortDesc: "None",
-        fullDesc: "Bring fairytales to life with detailed illustrations of castles, dragons, and heroes. Perfect for family coloring or solo adventures in fantasy worlds.",
-        price: "$9.99",
+        shortDesc: "Christmas Vibes, Relaxing and Fun!",
+        fullDesc: "Escape the holiday rush and find your calm with the Christmas Wonderland Coloring Book. Featuring intricate designs of festive decor, elegant winter landscapes, and detailed holiday patterns, this book is a perfect creative sanctuary.",
+        price: "$9.99 on Amazon (Soon)",
         price2: "$1.99 on Payhip, Gumroad",
         amazonLink: "",
-        gumroadLink: "https://roseteejay.gumroad.com/l/mueloe",
+        gumroadLink: "https://roseteejay.gumroad.com/l/lcpfxq",
         payhipLink: "https://payhip.com/b/x4CsQ"
     },
    
