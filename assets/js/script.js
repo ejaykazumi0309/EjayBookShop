@@ -22,7 +22,7 @@ const books = [
         fullDesc: "This Halloween coloring book is filled with adorable ghosts, pumpkins, and friendly monsters — perfect for kids who love a mix of spooky and sweet.",
         price: "Variant:",
         price2: "Physical Book & Ready to Print",
-        amazonLink: "",
+        amazonLink: "https://a.co/d/a9KfUge",
         gumroadLink: "https://roseteejay.gumroad.com/l/aulqh",
         payhipLink: "https://payhip.com/b/ftgRk"
     },
@@ -35,7 +35,7 @@ const books = [
         fullDesc: "Escape the holiday rush and find your calm with the Christmas Wonderland Coloring Book. Featuring intricate designs of festive decor, elegant winter landscapes, and detailed holiday patterns, this book is a perfect creative sanctuary.",
         price: "Variant:",
         price2: "Physical Book & PDF Ready to Print",
-        amazonLink: "",
+        amazonLink: "https://a.co/d/4C3phKX",
         gumroadLink: "https://roseteejay.gumroad.com/l/lcpfxq",
         payhipLink: "https://payhip.com/b/x4CsQ"
     },
