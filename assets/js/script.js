@@ -39,6 +39,20 @@ const books = [
         gumroadLink: "https://roseteejay.gumroad.com/l/lcpfxq",
         payhipLink: "https://payhip.com/b/x4CsQ"
     },
+
+    {
+        id: 4,
+        title: "Girl Moments: Cozy & Cute Coloring Book",
+        image: "assets/img/GirlMoments.png",
+        type: ["book", "pdf"],
+        shortDesc: "Step into a world of cozy vibes and cute moments with Girl Moments",
+        fullDesc: "This delightful collection features charming illustrations of everyday girl life — from lazy coffee mornings and journaling in bed to relaxing self-care nights and dreamy outfit days.",
+        price: "$9.99 on Amazon (Soon)",
+        price2: "$1.99 on Payhip, Gumroad",
+        amazonLink: "",
+        gumroadLink: "https://roseteejay.gumroad.com/l/fknjo",
+        payhipLink: "https://payhip.com/b/3JyNK"
+    },
    
     
 ];
