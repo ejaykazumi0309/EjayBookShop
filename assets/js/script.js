@@ -86,8 +86,8 @@ function openDetails(id) {
         <img src="${book.image}" alt="${book.title}">
         <h2>${book.title}</h2>
         <p>${book.fullDesc}</p>
-        <p><strong>Price: ${book.price}</strong></p>
-             <p><strong>Price: ${book.price2}</strong></p>
+        <p><strong>${book.price}</strong></p>
+             <p><strong>{book.price2}</strong></p>
         <button class="putanginamo" onclick="openBuy(${book.id})">Buy Now</button>
     `;
     document.getElementById('details-modal').style.display = 'flex';
