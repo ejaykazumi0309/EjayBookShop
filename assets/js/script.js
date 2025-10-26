@@ -8,7 +8,7 @@ const books = [
         shortDesc: "Adorable animal designs for kids to color and enjoy.",
         fullDesc: "Dive into a world of cute and playful animals with intricate patterns perfect for young colorists. This book includes 50 pages of fun, easy-to-color illustrations that spark imagination and creativity.",
         price: "Variant:",
-        price2: "Physical & SoftCopy",
+        price2: "Physical Book & PDF Ready to Print",
         amazonLink: "https://a.co/d/b1Ao1iX",
         gumroadLink: "https://roseteejay.gumroad.com/l/epjllw",
         payhipLink: "https://payhip.com/b/tPKgA"
@@ -20,8 +20,8 @@ const books = [
         type: ["book", "pdf"],
         shortDesc: "Cute, fun, and spooky!",
         fullDesc: "This Halloween coloring book is filled with adorable ghosts, pumpkins, and friendly monsters — perfect for kids who love a mix of spooky and sweet.",
-        price: "$9.99 on Amazon (Soon)",
-        price2: "$1.99 on Payhip, Gumroad",
+        price: "Variant:",
+        price2: "Physical Book & Ready to Print",
         amazonLink: "",
         gumroadLink: "https://roseteejay.gumroad.com/l/aulqh",
         payhipLink: "https://payhip.com/b/ftgRk"
@@ -33,8 +33,8 @@ const books = [
         type: ["book", "pdf"],
         shortDesc: "Christmas Vibes, Relaxing and Fun!",
         fullDesc: "Escape the holiday rush and find your calm with the Christmas Wonderland Coloring Book. Featuring intricate designs of festive decor, elegant winter landscapes, and detailed holiday patterns, this book is a perfect creative sanctuary.",
-        price: "$9.99 on Amazon (Soon)",
-        price2: "$1.99 on Payhip, Gumroad",
+        price: "Variant:",
+        price2: "Physical Book & PDF Ready to Print",
         amazonLink: "",
         gumroadLink: "https://roseteejay.gumroad.com/l/lcpfxq",
         payhipLink: "https://payhip.com/b/x4CsQ"
@@ -47,8 +47,8 @@ const books = [
         type: ["book", "pdf"],
         shortDesc: "Step into a world of cozy vibes and cute moments with Girl Moments",
         fullDesc: "This delightful collection features charming illustrations of everyday girl life — from lazy coffee mornings and journaling in bed to relaxing self-care nights and dreamy outfit days.",
-        price: "$9.99 on Amazon (Soon)",
-        price2: "$1.99 on Payhip, Gumroad",
+        price: "Variant",
+        price2: "Physical Book & PDF Ready to Print",
         amazonLink: "",
         gumroadLink: "https://roseteejay.gumroad.com/l/fknjo",
         payhipLink: "https://payhip.com/b/3JyNK"
@@ -87,7 +87,7 @@ function openDetails(id) {
         <h2>${book.title}</h2>
         <p>${book.fullDesc}</p>
         <p><strong>${book.price}</strong></p>
-             <p><strong>{book.price2}</strong></p>
+             <p><strong>${book.price2}</strong></p>
         <button class="putanginamo" onclick="openBuy(${book.id})">Buy Now</button>
     `;
     document.getElementById('details-modal').style.display = 'flex';
