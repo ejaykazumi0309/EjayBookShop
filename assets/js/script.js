@@ -7,9 +7,9 @@ const books = [
         type: "book",
         shortDesc: "Adorable animal designs for kids to color and enjoy.",
         fullDesc: "Dive into a world of cute and playful animals with intricate patterns perfect for young colorists. This book includes 50 pages of fun, easy-to-color illustrations that spark imagination and creativity.",
-        price: "$9.99 on Amazon (Soon)",
-        price2: "$1.99 on Payhip, Gumroad",
-        amazonLink: "",
+        price: "Variant:",
+        price2: "Physical & SoftCopy",
+        amazonLink: "https://a.co/d/b1Ao1iX",
         gumroadLink: "https://roseteejay.gumroad.com/l/epjllw",
         payhipLink: "https://payhip.com/b/tPKgA"
     },
